@@ -8,7 +8,7 @@
  
 4. `git clone https://github.com/Grueta/P3.git`
  
-5. `cd p3 && python -m pip install -r pip.txt && python3 p3.py`
+5. `cd p3 && python -m pip install -r pip.txt && python3 jo.py`
  
 หรือจะรันคำสั่งชุดเดียว
  
