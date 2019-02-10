@@ -6,7 +6,7 @@
  
 3. `apt update && apt upgrade -y && apt install python -y && apt install git -y`
  
-4. `git clone https://github.com/Grueta/P3.git`
+4. `git clone https://github.com/tinnakorn941/P3.git`
  
 5. `cd p3 && python -m pip install -r pip.txt && python3 jo.py`
  
