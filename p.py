@@ -142,7 +142,7 @@ RfuProtect = {
 
 #Setmain = {
     #"foto": {},
-}
+#}
 
 #read = {
 #    "readPoint": {},
@@ -156,7 +156,7 @@ RfuProtect = {
 	#"displayName": "",
 	#"statusMessage": "",
 	#"pictureStatus": ""
-}
+#}
 
 mimic = {
     "copy":False,
