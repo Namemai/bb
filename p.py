@@ -150,7 +150,7 @@ RfuProtect = {
 #    "readTime": {},
 #    "setTime":{},
 #    "ROM": {}
-}
+#}
 
 #myProfile = {
 	#"displayName": "",
