@@ -24,15 +24,15 @@ lineMID = line.profile.mid
 lineProfile = line.getProfile()
 lineSettings = line.getSettings()
 
-oepoll = OEPoll(line)
+#oepoll = OEPoll(line)
 #call = Call(line)
-readOpen = codecs.open("read.json","r","utf-8")
-settingsOpen = codecs.open("temp.json","r","utf-8")
-read = json.load(readOpen)
-settings = json.load(settingsOpen)
-Rfu = [line]
-Exc = [line]
-lineMID = line.getProfile().mid
+#readOpen = codecs.open("read.json","r","utf-8")
+#settingsOpen = codecs.open("temp.json","r","utf-8")
+#read = json.load(readOpen)
+#settings = json.load(settingsOpen)
+#Rfu = [line]
+#Exc = [line]
+#lineMID = line.getProfile().mid
 #bot1 = line.getProfile().mid
 #RfuBot=[lineMID]
 #Family=["u188a6636bea91aba0303d1866408f083",lineMID]
@@ -96,9 +96,9 @@ settings = {
     "spam":{},
     "invite": {},
     "winvite": False,
-    "pnharfbot": {},
-    "pname": {},
-    "pro_name": {},
+    #"pnharfbot": {},
+    #"pname": {},
+    #"pro_name": {},
     "message1":"",
     "messageadd":"",
     "userAgent": [
@@ -140,22 +140,22 @@ RfuProtect = {
     "autoBlock": True,
 }
 
-Setmain = {
-    "foto": {},
+#Setmain = {
+    #"foto": {},
 }
 
-read = {
-    "readPoint": {},
-    "readMember": {},
-    "readTime": {},
-    "setTime":{},
-    "ROM": {}
+#read = {
+#    "readPoint": {},
+#    "readMember": {},
+#    "readTime": {},
+#    "setTime":{},
+#    "ROM": {}
 }
 
-myProfile = {
-	"displayName": "",
-	"statusMessage": "",
-	"pictureStatus": ""
+#myProfile = {
+	#"displayName": "",
+	#"statusMessage": "",
+	#"pictureStatus": ""
 }
 
 mimic = {
@@ -189,13 +189,13 @@ rfuSet = {
 #backup.statusMessage = contact.statusMessage
 #backup.pictureStatus = contact.pictureStatus
 
-mulai = time.time() 
+#mulai = time.time() 
 
-try:
-    with open("Log_data.json","r",encoding="utf_8_sig") as f:
-        msg_dict = json.loads(f.read())
-except:
-    print("Couldn't read Log data")
+#try:
+#    with open("Log_data.json","r",encoding="utf_8_sig") as f:
+#        msg_dict = json.loads(f.read())
+#except:
+#    print("Couldn't read Log data")
 
 #myProfile["displayName"] = lineProfile.displayName
 #myProfile["statusMessage"] = lineProfile.statusMessage
@@ -345,7 +345,7 @@ def myhelp():
 ꧁ชุดคำสั่ง ภาษาไทย꧂
 ╔═══════════════════┓
 ╔══════════╗
-╠✰ เช็ค [เช็คการตั้งค่า]
+╠✰ เชค [เช็คการตั้งค่า]
 ╚══════════╝
 ╔══════════╗
 ╠✰ ผส [คท.ผู้สร้าง]
@@ -765,26 +765,7 @@ def lineBot(op):
                    else:
                         settings["dblacklist"] = False
                         line.sendText(msg.to,"Tidak Ada Dalam Da ftar Blacklist")
-                               
-        if op.type == 25:
-            msg = op.message
-            text = msg.text
-            msg_id = msg.id
-            receiver = msg.to
-            sender = msg._from
-            if msg.toType == 0 or msg.toType == 1 or msg.toType == 2:
-                if msg.toType == 0:
-                    if sender != line.profile.mid:
-                        to = sender
-                    else:
-                        to = receiver
-                elif msg.toType == 1:
-                    to = receiver
-                elif msg.toType == 2:
-                    to = receiver
-            if msg.contentType == 0:
-                if text is None:
-                    return
+
 #==============================================================================#
                 if ".พูด " in msg.text.lower():
                     spl = re.split(".พูด ",msg.text,flags=re.IGNORECASE)
@@ -804,7 +785,7 @@ def lineBot(op):
                         p = Pool(20)
                         p.map(Rapid1Say,rmtosay)
                         p.close()
-                if text.lower() == 'help':
+                if text.lower() == 'คำสั่ง':
                     myHelp = myhelp()
                     line.sendMessage(to, str(myHelp))  
                 elif text.lower() == 'คำสั่ง1':
@@ -868,7 +849,7 @@ def lineBot(op):
                     except Exception as e:
                         line.sendMessage(msg.to, str(e))
 #==============================================================================#
-                elif text.lower() == '.เช็ค':
+                elif text.lower() == '.เชค':
                     try:
                         ret_ = "╔════[ Status ]═════┓"
                         if settings["autoBlock"] == True: ret_ += "\n╠ ออโต้บล็อค✔"
@@ -1186,18 +1167,18 @@ def lineBot(op):
                             line.updateProfile(profile)
                             line.sendMessage(msg.to, "Success...")
                         #---------------------------------------
-                            Y = contact.statusMessage
-                            lol = line.getProfile()
-                            lol.statusMessage = Y
-                            line.updateProfile(lol)
+                            #Y = contact.statusMessage
+                            #lol = line.getProfile()
+                            #lol.statusMessage = Y
+                            #line.updateProfile(lol)
                         #---------------------------------------
-                            P = contact.pictureStatus
-                            hun = line.getProfile()
-                            hun.pictureStatus = P
-                            line.updateProfile(hun)
-                        except Exception as e:
-                            line.sendMessage(msg.to, "Failed!")
-                            print (e)
+                            #P = contact.pictureStatus
+                            #hun = line.getProfile()
+                            #hun.pictureStatus = P
+                            #line.updateProfile(hun)
+                        #except Exception as e:
+                            #line.sendMessage(msg.to, "Failed!")
+                            #print (e)
 
                 elif msg.text in [".คืนร่าง"]:
                     try:
@@ -1208,7 +1189,7 @@ def lineBot(op):
                     except Exception as e:
                         line.sendText(msg.to, str (e))
                         
-                elif msg.text in ["Allprotect on",".เปิดกทม"]:
+                elif msg.text in ["Allprotect on",".เปิด"]:
                         settings["kickMention"] = True
                         settings["Aip"] = False
                         RfuProtect["protect"] = True
@@ -1219,7 +1200,7 @@ def lineBot(op):
                         RfuProtect["Protectjoin"] = True
                         line.sendText(msg.to,"การตั้งค่าชุดรักษาความปลอดภัยทั้งหมด เปิด👌")
 						
-                elif msg.text in ["Allprotect off",".ปิดกทม"]:
+                elif msg.text in ["Allprotect off",".ปิด"]:
                         settings["kickMention"] = False
                         settings["Aip"] = False
                         RfuProtect["protect"] = False
@@ -3403,7 +3384,7 @@ def lineBot(op):
                          line.sendMessage(msg.to, "ตั้งข้อความเรืยบร้อย")
                      else:
                          settings["messageadd"] = spl
-                         line.sendMessage(msg.to, "™MIN HACK SELFBOT\n👇ตั้งข้อความตอบโต้เมื่อมีคนแอดแล้ว ดังนี้👇\n\n👉{}".format(str(spl)))
+                         line.sendMessage(msg.to, "꧁❈§{MAI}§❈꧂👇ตั้งข้อความตอบโต้เมื่อมีคนแอดแล้ว ดังนี้👇\n\n👉{}".format(str(spl)))
                          
                 elif '.คอมเม้น: ' in msg.text:
                   if msg._from in admin:
@@ -3412,7 +3393,7 @@ def lineBot(op):
                          line.sendMessage(msg.to, "ตั้งข้อความเรืยบร้อย")
                      else:
                          settings["comment"] = spl
-                         line.sendMessage(msg.to, "™MIN HACK SELFBOT\n👇ตั้งข้อความคอมเม้นของคุณแล้ว ดังนี้👇\n\n👉{}".format(str(spl))) 
+                         line.sendMessage(msg.to, "꧁❈§{MAI}§❈꧂👇ตั้งข้อความคอมเม้นของคุณแล้ว ดังนี้👇\n\n👉{}".format(str(spl))) 
                     
                 elif '.ตั้งแทค: ' in msg.text:
                   if msg._from in admin:
@@ -3421,7 +3402,7 @@ def lineBot(op):
                          line.sendMessage(msg.to, "ตั้งข้อความเรืยบร้อย")
                      else:
                          settings["Respontag"] = spl
-                         line.sendMessage(msg.to, "™MIN HACK SELFBOT\n👇ตั้งข้อความตอบโต้เมื่อมีคนแทคแล้ว👇\n\n👉{}".format(str(spl)))
+                         line.sendMessage(msg.to, "꧁❈§{MAI}§❈꧂👇ตั้งข้อความตอบโต้เมื่อมีคนแทคแล้ว👇\n\n👉{}".format(str(spl)))
                          
                 elif '.ทักเตะ: ' in msg.text:
                   if msg._from in admin:
@@ -3430,7 +3411,7 @@ def lineBot(op):
                          line.sendMessage(msg.to, "ตั้งข้อความคนคนลบสมาชิดเรียบร้อย")
                      else:
                           settings["kick"] = spl
-                          line.sendMessage(msg.to, "MIN HACK SELFBOT\nตั้งค่าข้อความเมื่อมีคนลบสมาชิกแล้ว\nดังนี้👇\n\n👉{}".format(str(spl)))
+                          line.sendMessage(msg.to, "꧁❈§{MAI}§❈꧂\nตั้งค่าข้อความเมื่อมีคนลบสมาชิกแล้ว\nดังนี้👇\n\n👉{}".format(str(spl)))
 
                 elif '.ทักออก: ' in msg.text:
                   if msg._from in admin:
@@ -3439,7 +3420,7 @@ def lineBot(op):
                          line.sendMessage(msg.to, "ตั้งข้อความคนออกเรียบร้อย")
                      else:
                           settings["bye"] = spl
-                          line.sendMessage(msg.to, "™MIN HACK SELFBOT➣\nตั้งค่าข้อความเมื่อมีคนออกจากกลุ่มแล้ว\nดังนี้👇\n\n👉{}".format(str(spl)))
+                          line.sendMessage(msg.to, "꧁❈§{MAI}§❈꧂\nตั้งค่าข้อความเมื่อมีคนออกจากกลุ่มแล้ว\nดังนี้👇\n\n👉{}".format(str(spl)))
 
                 elif '.ทักเข้า: ' in msg.text:
                   if msg._from in admin:
@@ -3448,7 +3429,7 @@ def lineBot(op):
                          line.sendMessage(msg.to, "ตั้งข้อความคนเข้าเรียบร้อยแล้ว")
                      else:
                           settings["welcome"] = spl
-                          line.sendMessage(msg.to, "™MIN HACK SELFBOT\nตั้งค่าข้อความเมื่อมีคนเข้ากลุ่มแล้ว\nดังนี้👇\n\n👉{}".format(str(spl)))
+                          line.sendMessage(msg.to, "꧁❈§{MAI}§❈꧂\nตั้งค่าข้อความเมื่อมีคนเข้ากลุ่มแล้ว\nดังนี้👇\n\n👉{}".format(str(spl)))
 
                 elif msg.text.lower().startswith("textig "):
                     sep = msg.text.split(" ")
@@ -4321,12 +4302,12 @@ def lineBot(op):
                if op.param2 not in Family:
                    random.choice(Rfu).kickoutFromGroup(op.param1,[op.param2])
 
-        if op.type == 1:
-            if sender in Setmain["foto"]:
-                path = line.downloadObjectMsg(msg_id)
-                del Setmain["foto"][sender]
-                line.updateProfilePicture(path)
-                line.sendMessage(to,"Foto berhasil dirubah")
+#        if op.type == 1:
+#            if sender in Setmain["foto"]:
+#                path = line.downloadObjectMsg(msg_id)
+#                del Setmain["foto"][sender]
+#                line.updateProfilePicture(path)
+#                line.sendMessage(to,"Foto berhasil dirubah")
         if op.type == 26:
             msg = op.message
             if settings ["Aip"] == True:
@@ -4469,11 +4450,11 @@ def lineBot(op):
 #                if msg.contentType == 0 and sender not in lineMID and msg.toType == 2:
                 if msg.contentType == 0 and sender not in lineMID and msg.toType == 2:
                     if "MENTION" in list(msg.contentMetadata.keys())!= None:
-                         if settings['potoMention'] == True:
+                         if settings['potoMention'] == False:
                              contact = line.getContact(msg._from)
                              cName = contact.pictureStatus
                              mi_d = contact.mid
-                             balas = ["http://dl.profile.line-cdn.net/"]
+                             #balas = ["http://dl.profile.line-cdn.net/"]
                              ret_ = random.choice(balas)
                              mention = ast.literal_eval(msg.contentMetadata["MENTION"])
                              mentionees = mention["MENTIONEES"]
@@ -4554,7 +4535,7 @@ def lineBot(op):
              line.sendMessage(op.param1, str(settings["welcome"]))
              line.sendContact(op.param1, op.param2)
              #line.sendMessage(op.param1,"สเตตัส\n{}".format(str(dan.statusMessage)))
-             line.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
+             #line.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
              #line.sendMessage(op.param1, str(settings["comment"]))
         if op.type == 19:
            print ("MEMBER KICKOUT TO GROUP")
@@ -4566,7 +4547,7 @@ def lineBot(op):
              line.sendMessage(op.param1,str(settings["kick"]))
              line.sendContact(op.param1, op.param2)
              #line.sendMessage(op.param1,"สเตตัส\n{}".format(str(dan.statusMessage)))
-             line.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
+ #            line.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
         if op.type == 15:
            print ("MEMBER LEAVE TO GROUP")
            if settings["Lv"] == True:
@@ -4576,7 +4557,7 @@ def lineBot(op):
              tgb = line.getGroup(op.param1)
              line.sendMessage(op.param1,str(settings["bye"]))
              line.sendContact(op.param1, op.param2)
-             line.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
+  #           line.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
         if op.type == 55:
             try:
                 if RfuCctv['cyduk'][op.param1]==True:
@@ -4618,7 +4599,7 @@ def lineBot(op):
             except:
                 pass
         if op.type == 55:
-            print ("[BY MIN HACK BOT]")
+            print ("[꧁❈§{MAI}§❈꧂]")
             try:
                 if op.param1 in read['readPoint']:
                     if op.param2 in read['readMember'][op.param1]:
