@@ -55,14 +55,14 @@ settings = {
     "autoJoin": True,
     'autoCancel':{"on":True,"members":10},	
     "autoLeave": True,
-    "autoRead": True,
+    "autoRead": False,
     "leaveRoom": False,
-    "detectMention": True,
+    "detectMention": False,
     "checkSticker": False,
     "checkContact": False,
     "checkPost": False,
     "kickMention": False,
-    "potoMention": True,
+    "potoMention": False,
     "delayMention": False,
     "lang":"JP",
     "Wc": True,
@@ -177,17 +177,17 @@ rfuSet = {
     'winvite':{},
     }
 
-user1 = lineMID
-user2 = ""
+#user1 = lineMID
+#user2 = ""
 	
-setTime = {}
-setTime = rfuSet['setTime']
+#setTime = {}
+#setTime = rfuSet['setTime']
 
-contact = line.getProfile() 
-backup = line.getProfile() 
-backup.dispalyName = contact.displayName 
-backup.statusMessage = contact.statusMessage
-backup.pictureStatus = contact.pictureStatus
+#contact = line.getProfile() 
+#backup = line.getProfile() 
+#backup.dispalyName = contact.displayName 
+#backup.statusMessage = contact.statusMessage
+#backup.pictureStatus = contact.pictureStatus
 
 mulai = time.time() 
 
@@ -197,9 +197,9 @@ try:
 except:
     print("Couldn't read Log data")
 
-myProfile["displayName"] = lineProfile.displayName
-myProfile["statusMessage"] = lineProfile.statusMessage
-myProfile["pictureStatus"] = lineProfile.pictureStatus
+#myProfile["displayName"] = lineProfile.displayName
+#myProfile["statusMessage"] = lineProfile.statusMessage
+#myProfile["pictureStatus"] = lineProfile.pictureStatus
 #==============================================================================#
 #==============================================================================#            
 def Rapid1Say(mtosay):
