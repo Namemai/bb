@@ -88,7 +88,7 @@ settings = {
     "changePictureProfile":False,
     "unsendMessage": False,
     "autoJoinTicket": False,
-    "welcome":"[Line://ti/g2/OXNFJ5K4P9]",
+    "welcome":"[]",
     "kick":"เอาหวะใจแม่งได้หวะ",
     "bye":"นายทำดีแล้วเพื่อน ลาก่อน",
     "Respontag":"💗",
@@ -341,8 +341,7 @@ def mentionMembers(to, mid):
         line.sendMessage(to, "[ INFO ] Error :\n" + str(error))
 
 def myhelp():
-    myHelp = """꧁มินทีมทดลองบอท꧂
- SELF BOT MIN HACK
+    myHelp = """꧁❈§{MAI}§❈꧂
 ꧁ชุดคำสั่ง ภาษาไทย꧂
 ╔═══════════════════┓
 ╔══════════╗
@@ -434,8 +433,7 @@ def myhelp():
     return myHelp
 
 def listgrup():
-    listGrup = """꧁มินทีมทดลองบอท꧂
- SELF BOT MIN HACK
+    listGrup = """꧁❈§{MAI}§❈꧂
 ꧁ชุดคำสั่ง ภาษาไทย꧂
  ────┅═ই۝ई═┅────
              คำสั่งในกลุ่ม
@@ -479,8 +477,7 @@ def listgrup():
     return listGrup
 
 def socmedia():
-    socMedia = """꧁มินทีมทดลองบอท꧂
- SELF BOT MIN HACK
+    socMedia = """꧁❈§{MAI}§❈꧂
 ꧁ชุดคำสั่ง ภาษาไทย꧂
 
 ╔══════════════┓
@@ -502,8 +499,7 @@ def socmedia():
     return socMedia
 
 def helpset():
-    helpSet = """꧁มินทีมทดลองบอท꧂
- SELF BOT MIN HACK
+    helpSet = """꧁❈§{MAI}§❈꧂
 ꧁ชุดคำสั่ง ภาษาไทย꧂
 ╔══════════════┓
 ╠❂➣ โย่ว
@@ -551,8 +547,7 @@ def helpset():
     return helpSet
 
 def helpsetting():
-    helpSetting = """꧁มินทีมทดลองบอท꧂
- SELF BOT MIN HACK
+    helpSetting = """꧁❈§{MAI}§❈꧂
 ꧁ชุดคำสั่ง ภาษาไทย꧂
 ╔══════════════┓
 ╠❂➣ เปิดกัน/ปิดกัน
@@ -589,7 +584,7 @@ def helpsetting():
 
 def helptexttospeech():
     helpTextToSpeech =   """╔══════════════┓
-╠™❍✯͜͡RED™SAMURI✯͜͡❂➣ 
+╠꧁❈§{MAI}§❈꧂
 ╚══════════════┛
  ────┅═ই۝ई═┅────
    คำสั่งพูดMp3ภาษาต่างๆ
@@ -616,9 +611,9 @@ def helptexttospeech():
 ╠❂➣ sr : เซอเบียร์
 ╠❂➣ th : ไทย
 ╠❂➣ vi : เวียดนาม
-╰═✰™❍✯͜͡RED™SAMURAI✯͜͡❂➣
+╰═✰꧁❈§{MAI}§❈꧂
 
-「วิธีใช้ : say-th ผมชื่อเรดนะครับ」"""
+「วิธีใช้ : say-th ผมชื่อ」"""
     return helpTextToSpeech
     
 def helplanguange():
