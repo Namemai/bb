@@ -767,7 +767,7 @@ def lineBot(op):
                         line.sendText(msg.to,"Tidak Ada Dalam Da ftar Blacklist")
 
 #==============================================================================#
-                if text.lower() == 'คำสั่ง':
+                elif text.lower() == 'คำสั่ง':
                     myHelp = myhelp()
                     line.sendMessage(to, str(myHelp))  
                 elif text.lower() == 'คำสั่ง1':
