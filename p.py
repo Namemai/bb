@@ -767,24 +767,6 @@ def lineBot(op):
                         line.sendText(msg.to,"Tidak Ada Dalam Da ftar Blacklist")
 
 #==============================================================================#
-                if ".พูด " in msg.text.lower():
-                    spl = re.split(".พูด ",msg.text,flags=re.IGNORECASE)
-                    if spl[0] == "":
-                        mts = spl[1]
-                        mtsl = mts.split()
-                        mtsTimeArg = len(mtsl) - 1
-                        mtsTime = mtsl[mtsTimeArg]
-                        del mtsl[mtsTimeArg]
-                        mtosay = " ".join(mtsl)
-                        global Rapid1To
-                        Rapid1To = msg.to
-                        RapidTime = mtsTime
-                        rmtosay = []
-                        for count in range(0,int(RapidTime)):
-                            rmtosay.insert(count,mtosay)
-                        p = Pool(20)
-                        p.map(Rapid1Say,rmtosay)
-                        p.close()
                 if text.lower() == 'คำสั่ง':
                     myHelp = myhelp()
                     line.sendMessage(to, str(myHelp))  
