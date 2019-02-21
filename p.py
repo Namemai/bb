@@ -33,11 +33,11 @@ settings = json.load(settingsOpen)
 Rfu = [line]
 Exc = [line]
 lineMID = line.getProfile().mid
-bot1 = line.getProfile().mid
-RfuBot=[lineMID]
-Family=["u188a6636bea91aba0303d1866408f083",lineMID]
-admin=['u15d6baf1b56b371f98fe441f0abf3ec5',lineMID]
-RfuFamily = RfuBot + Family
+#bot1 = line.getProfile().mid
+#RfuBot=[lineMID]
+#Family=["u188a6636bea91aba0303d1866408f083",lineMID]
+#admin=['u15d6baf1b56b371f98fe441f0abf3ec5',lineMID]
+#RfuFamily = RfuBot + Family
 
 protectname = []
 protecturl = []
@@ -837,7 +837,7 @@ def lineBot(op):
                     line.sendMessage(to, "กำลังทดสอบ")
                     elapsed_time = time.time() - start
                     line.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
-                elif text.lower() == '.เริ่มใหม่':
+                elif text.lower() == '.รี':
                     line.sendMessage(to, "กำลังเริ่มต้นใหม่ ... โปรดรอสักครู่ ..")
                     line.sendMessage(to, "Success Restarting.")
                     restartBot()
@@ -855,14 +855,14 @@ def lineBot(op):
                         grouplist = line.getGroupIdsJoined()
                         contactlist = line.getAllContactIds()
                         blockedlist = line.getBlockedContactIds()
-                        ret_ = "╔══[BY.มินทีมทดลองบอท]"
+                        ret_ = "╔══[꧁❈§{MAI}§❈꧂]"
                         ret_ += "\n╠۝ ชื่อ ═ {}".format(contact.displayName)
                         ret_ += "\n╠۝ กลุ่ม ═ {}".format(str(len(grouplist)))
                         ret_ += "\n╠۝ เพื่อน ═ {}".format(str(len(contactlist)))
                         ret_ += "\n╠۝ บล็อค ═ {}".format(str(len(blockedlist)))
                         ret_ += "\n╠══[สถานะ] ═ {}".format(contact.statusMessage)
                         ret_ += "\n╠۝ ผู้สร้าง ═ {}".format(creator.displayName)
-                        ret_ += "\n╚══[BY.มินทีมทดลองบอท]"
+                        ret_ += "\n╚══[]"
                         line.sendContact(to, owner)
                         line.sendMessage(to, str(ret_))
                     except Exception as e:
@@ -921,7 +921,7 @@ def lineBot(op):
                         else: ret_ += "\n╠ ป้องกันสมาชิก ✘ "
                         if RfuProtect["Protectjoin"] == True: ret_ += "\n╠ ป้องกันเข้ากลุ่ม ✔"
                         else: ret_ += "\n╠ ป้องกันเข้ากลุ่ม ✘ "						
-                        ret_ += "\n[BY.มินทีมทดลองบอท]"
+                        ret_ += "\n[꧁❈§{MAI}§❈꧂]"
                         line.sendMessage(to, str(ret_))
                     except Exception as e:
                         line.sendMessage(msg.to, str(e))
@@ -1010,7 +1010,7 @@ def lineBot(op):
                     line.sendContact(to, lineMID)
                 elif text.lower() == '.ผส':
                     sendMessageWithMention(to, lineMID)
-                    line.sendContact(to, "ufad8bc98e4811b51115039219b8f8faf")
+                    line.sendContact(to, "")
                 elif text.lower() == '.ไอดี':
                     line.sendMessage(msg.to,"[MID]\n" +  lineMID)
                 elif text.lower() == '.ชื่อ':
@@ -1464,10 +1464,10 @@ def lineBot(op):
                             line.sendText(msg.to,"ข้อความสเตตัส:\n"+userData.statusMessage)
                             line.sendText(msg.to,"ไอดีบัญชี: "+userData.mid)
                 
-                elif "รับแก้ไฟล์+เพิ่มไฟล์+แก้ภาษา\n💝ราคาดูที่หน้างาน💝\n👉มีบริการให้เช่าบอทSAMURAI\nราคา300บาทต่อเดือน💖\n#เพิ่มคิกเกอร์ตัวละ100👌\n🎀สนใจรีบทัก..บอทpython3ฟังชั่นล้นหลาม🎁กำลังรอให้คุณเป็นเจ้าของ\n(ผมจะอยู่ที่ห้องนี้แค่15นาทีนะจ๊ะ)\nselfbot by:\n╔══════════════┓\n[BY.มินทีมทดลองบอท] \n╚══════════════┛" in msg.text:
-                    spl = msg.text.split("รับแก้ไฟล์+เพิ่มไฟล์+แก้ภาษา\n💝ราคาดูที่หน้างาน💝\n👉มีบริการให้เช่าบอทSAMURAI\nราคา300บาทต่อเดือน💖\n#เพิ่มคิกเกอร์ตัวละ100👌\n🎀สนใจรีบทัก..บอทpython3ฟังชั่นล้นหลาม🎁กำลังรอให้คุณเป็นเจ้าของ\n(ผมจะอยู่ที่ห้องนี้แค่15นาทีนะจ๊ะ)\nselfbot by:\n╔══════════════┓\n[BY.มินทีมทดลองบอท]➣ \n╚══════════════┛")
-                    if spl[len(spl)-1] == "":
-                        line.sendText(msg.to,"กดที่นี่เพื่อเขย่าข้อความด้านบน:\nline://nv/chatMsg?chatId="+msg.to+"&messageId="+msg.id) ### CMD COVER
+#                elif "รับแก้ไฟล์+เพิ่มไฟล์+แก้ภาษา\n💝ราคาดูที่หน้างาน💝\n👉มีบริการให้เช่าบอทSAMURAI\nราคา300บาทต่อเดือน💖\n#เพิ่มคิกเกอร์ตัวละ100👌\n🎀สนใจรีบทัก..บอทpython3ฟังชั่นล้นหลาม🎁กำลังรอให้คุณเป็นเจ้าของ\n(ผมจะอยู่ที่ห้องนี้แค่15นาทีนะจ๊ะ)\nselfbot by:\n╔══════════════┓\n[BY.มินทีมทดลองบอท] \n╚══════════════┛" in msg.text:
+#                    spl = msg.text.split("รับแก้ไฟล์+เพิ่มไฟล์+แก้ภาษา\n💝ราคาดูที่หน้างาน💝\n👉มีบริการให้เช่าบอทSAMURAI\nราคา300บาทต่อเดือน💖\n#เพิ่มคิกเกอร์ตัวละ100👌\n🎀สนใจรีบทัก..บอทpython3ฟังชั่นล้นหลาม🎁กำลังรอให้คุณเป็นเจ้าของ\n(ผมจะอยู่ที่ห้องนี้แค่15นาทีนะจ๊ะ)\nselfbot by:\n╔══════════════┓\n[BY.มินทีมทดลองบอท]➣ \n╚══════════════┛")
+#                    if spl[len(spl)-1] == "":
+#                        line.sendText(msg.to,"กดที่นี่เพื่อเขย่าข้อความด้านบน:\nline://nv/chatMsg?chatId="+msg.to+"&messageId="+msg.id) ### CMD COVER
                 elif ".รันแชท @" in msg.text:
                     _name = msg.text.replace(".รันแชท @","")
                     _nametarget = _name.rstrip(' ')
@@ -1615,10 +1615,10 @@ def lineBot(op):
                     thisgroup = line.getGroups([msg.to])
                     Mids = [contact.mid for contact in thisgroup[0].members]
                     mi_d = Mids[:33]
-                    line.createGroup("MIN HACK SELFBOT", mi_d)
-                    line.sendText(msg.to,"MIN HACK BOT")
-                    line.createGroup("MIN HACK SELFBOT", mi_d)
-                    line.sendText(msg.to,"MIN HACK BOT")
+                    line.createGroup("SELFBOT", mi_d)
+                    line.sendText(msg.to,"BOT")
+                    line.createGroup("SELFBOT", mi_d)
+                    line.sendText(msg.to,"BOT")
                 elif ".รัน: " in msg.text.lower():
                         key = msg.text[-33:]
                         line.findAndAddContactsByMid(key)                   
@@ -3479,7 +3479,7 @@ def lineBot(op):
 #=============COMMAND KICKER===========================#
 
 #==============================================================================#          
-                elif text.lower() == 'แท็ก':
+                elif text.lower() == 'แทค':
                             if msg.toType == 0:
                                 sendMention(to, to, "", "")
                             elif msg.toType == 2:
@@ -4056,7 +4056,7 @@ def lineBot(op):
                             settings["changeGroupPicture"].append(to)
                         line.sendMessage(to, "ส่งรูปภาพลงมาไดเเลยครับผม")
                 elif text.lower() == ".ดับไฟ":
-                    line.sendContact(to, "u1f41296217e740650e0448b96851a3e2',")      
+                    line.sendContact(to, "',")      
 
                 elif text.lower() == '.ลบรัน':
                     gid = line.getGroupIdsInvited()
@@ -4360,7 +4360,7 @@ def lineBot(op):
                                 auth = "\n  ผู้เขียนโพส : {}".format(str(contact.displayName))
                             else:
                                 auth = "\n  ผู้เขียนโพส : {}".format(str(msg.contentMetadata["serviceName"]))
-                            purl = "\n  ลิ้งโพส : {}".format(str(msg.contentMetadata["postEndUrl"]).replace("line://","https://line.me/R/"))
+                            purl = "\n  ลิ้งโพส : {}".format(str(msg.contentMetadata["postEndUrl"]).replace(""))
                             ret_ += auth
                             ret_ += purl
                             if "mediaOid" in msg.contentMetadata:
@@ -4586,7 +4586,7 @@ def lineBot(op):
                             pass
                         else:
                             RfuCctv['sidermem'][op.param1] += "\n🔰" + Name
-                            pref=['จ๊ะเอ๋','รู้นะว่าแอบอยู่','เล่นซ่อนแอบกันเหรอ','คิดว่าเป็นนินจารึไง','ว่าไง','อ่านอย่างเดียวเลยนะ','ออกมาคุยหน่อย','ออกมาเดี๋ยวนี้']
+                            pref=['จ๊ะเอ๋','รู้นะว่าแอบอยู่','เล่นซ่อนแอบกันเหรอ','คิดว่าเป็นนินจารึไง','ว่าไง','อ่านอย่างเดียวเลยนะ','ออกมาคุยหน่อย','ออกมาเดี๋ยวนี้'.'รู้นร้าาาว่าแอบอยู่'.'ออกมาคุยกับเต้าหน่อย'.'เหงาไหมเตง']
                             sendMessageWithMention(op.param1, op.param2)
                             line.sendMessage(op.param1, str(random.choice(pref)) + '\n♪ ♬ ヾ(´︶`♡)ﾉ ♬ ♪')
                             line.sendContact(op.param1, op.param2)
