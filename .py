@@ -103,7 +103,7 @@ settings = {
     "man1":"ตั้งข้อความ",
     "man2":"ตั้งข้อความ",
     "man3":"ตั้งข้อความ",
-    "message":"บัญชีนี้ได้การป้องกันโดย Ŧ€₳M↬฿❂Ŧ↬ȾɆ₦₮Ɑ₡ŁɆ🇹🇭  ระบบได้ทำการบล็อคคุณอัตโนมัติ\nติดต่อเชลบอทรึบอทวี10คอมเม้นในโพสเลยคับ",
+    "message":"บัญชีนี้ได้การป้องกันโดย Ŧ€₳M↬฿❂Ŧ↬꧁❈§{MAI}§❈꧂🇹🇭  ระบบได้ทำการบล็อคคุณอัตโนมัติ\nติดต่อเชลบอทรึบอทวี10คอมเม้นในโพสเลยคับ",
     "comment":"Thanks for add me",
     "userAgent": [
         "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
@@ -256,7 +256,7 @@ def sendMessageWithMention(to, lineMID):
         logError(error)
  
 def myhelp():
-    myHelp = """〘😎😎😎 〙 
+    myHelp = """〘 ꧁❈§{MAI}§❈꧂ 〙 
 🇹🇭h1=คำสั่ง
 🇹🇭h2=คำสั่งเชล
 🇹🇭h3=คำสั่งกับแทค
@@ -606,7 +606,7 @@ def lineBot(op):
                     line.sendMessage(to, "█████████▒... 90.0%")
                     line.sendMessage(to, "███████████..100.0%")
                     line.sendMessage(to, "👍〘บอทยังอยู่ครับท่าน〙👍")
-                elif msg.text.lower() == ".ออน":
+                elif msg.text.lower() == "ออน":
                     line.sendMessage(msg.to,(str(datetime.datetime.now() - start_runtime)[:-7].split(" days, ")[0]+" วัน "+str(datetime.datetime.now() - start_runtime)[:-7].split(" days, ")[1].split(":")[0]+" ชั่วโมง " if "days" in str(datetime.datetime.now() - start_runtime) else str(datetime.datetime.now() - start_runtime)[:-7].split(" day, ")[0]+" วัน "+str(datetime.datetime.now() - start_runtime)[:-7].split(" day, ")[1].split(":")[0]+" ชั่วโมง " if "day" in str(datetime.datetime.now() - start_runtime) else str(datetime.datetime.now() - start_runtime)[:-7].split(":")[0]+" ชั่วโมง ")+str(datetime.datetime.now() - start_runtime)[:-7].split(":")[1]+" นาที "+str(datetime.datetime.now() - start_runtime)[:-7].split(":")[2]+" วินาที")               
                 elif "คท " in msg.text:
                     mmid = msg.text.replace("คท ","")
@@ -668,7 +668,7 @@ def lineBot(op):
                     line.kickoutFromGroup(to,[midd])
                     line.findAndAddContactsByMid(midd)
                     line.inviteIntoGroup(to,[midd])
-                elif msg.text.lower() == "speed":
+                elif msg.text.lower() == "sp":
                     start = time.time()
                     line.sendMessage(msg.to,"ความเร็วอยู่ที่")
                     line.sendMessage(msg.to,str(int(round((time.time() - start) * 1000)))+" ms")
@@ -716,17 +716,17 @@ def lineBot(op):
                     timeNow = time.time()
                     runtime = timeNow - botStart
                     runtime = format_timespan(runtime)
-                    line.sendMessage(to, "〘Ŧ€₳M↬฿❂Ŧ↬ȾɆ₦₮Ɑ₡ŁɆ 🇹🇭 〙\n""ระยะเวลาการทำงานของบอท {}".format(str(runtime)))
+                    line.sendMessage(to, "〘 ꧁❈§{MAI}§❈꧂ 〙\n""ระยะเวลาการทำงานของบอท {}".format(str(runtime)))
                 elif text.lower() == 'บอท':
                     try:
                         arr = []
-                        owner = "ufb6d6e2e1849c403d55f4ba3071985a2"
+                        owner = ""
                         creator = line.getContact(owner)
                         contact = line.getContact(lineMID)
                         grouplist = line.getGroupIdsJoined()
                         contactlist = line.getAllContactIds()
                         blockedlist = line.getBlockedContactIds()
-                        ret_ = "╔══[ 😎😎😎 ]" 
+                        ret_ = "╔══[ ꧁❈§{MAI}§❈꧂ ]" 
                         ret_ += "\n╠❂☞ ชื่อ ═ {}".format(contact.displayName)
                         ret_ += "\n╠❂☞ กลุ่ม ═ {}".format(str(len(grouplist)))
                         ret_ += "\n╠❂☞ เพื่อน ═ {}".format(str(len(contactlist)))
@@ -734,14 +734,14 @@ def lineBot(op):
                         ret_ += "\n╠══[สถานะ]"
                         ret_ += "\n╠❂☞ ผู้สร้าง ═ {}".format(creator.displayName)
                         ret_ += "\n╚══[ 😎😎😎 ]"
-                        line.sendContact(to, owner)
+                        #line.sendContact(to, owner)
                         line.sendMessage(to, str(ret_))
                     except Exception as e:
                         line.sendMessage(msg.to, str(e))
 #==============================================================================#
                 elif text.lower() == 'เชคค่า':
                     try:
-                        ret_ = "╔════[ 😎😎😎 ]═════┓"
+                        ret_ = "╔════[ ꧁❈§{MAI}§❈꧂ ]═════┓"
                         if settings["autoBlock"] == True: ret_ += "\n╠❂☞ รับบล็อคออโต้ ✔"
                         else: ret_ += "\n╠❂☞ รับบล็อคออโต้    ✘ "
                         if settings["autoJoin"] == True: ret_ += "\n╠❂☞ เข้าห้องออโต้ ✔"
@@ -881,7 +881,7 @@ def lineBot(op):
                     line.sendContact(to, lineMID)
                 elif text.lower() == 'ผส':
                     sendMessageWithMention(to, lineMID)
-                    line.sendContact(to, "uufb6d6e2e1849c403d55f4ba3071985a2")
+                    line.sendContact(to, "")
                 elif text.lower() == 'มิด':
                     line.sendMessage(msg.to,"[MID]\n" +  lineMID)
                 elif text.lower() == 'ชื่อ':
@@ -3818,7 +3818,7 @@ def lineBot(op):
                         y += "\nExample: "+str(data["list"][0]["example"])
                         line.sendMessage(to, str(y))
             elif msg.contentType == 1:
-                    if settings["changePictureProfile"] == True:
+                    if settings["อัพ"] == True:
                         path = line.downloadObjectMsg(msg_id)
                         settings["changePictureProfile"] = False                                                                               
                         line.updateProfilePicture(path)                                                                                        
@@ -4078,7 +4078,7 @@ def lineBot(op):
                             pass
                         else:
                             RfuCctv['sidermem'][op.param1] += "\n🔰" + Name
-                            pref=['สวัดดีคนอ่าน']
+                            pref=['สวัดดีคนอ่าน','แอบอยู่รุ้นะ','ออกมาเด่วนี้','เด่วจับตีก้นเลยนิ','คิดว่าเปนนินจารึไง','เล่นซอนแอบกันหรา','เล่นด้วยได้ไหม','จ๊ะเอ','หาตัวเจอแล้วนร้าาา']
                             line.sendMessage(op.param1, str(random.choice(pref))+' '+Name)
                     else:
                         pass
