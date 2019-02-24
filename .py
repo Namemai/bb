@@ -39,7 +39,7 @@ line.log("Timeline Token : " + str(line.tl.channelAccessToken))
 #ks.log("Auth Token : " + str(ks.authToken))
 #ks.log("Timeline Token : " + str(ks.tl.channelAccessToken))
 print ("Login Succes")
-print ("")
+print ("꧁❈§{MAI}§❈꧂")
 
 lineMID = line.profile.mid
 lineProfile = line.getProfile()
