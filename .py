@@ -39,7 +39,7 @@ line.log("Timeline Token : " + str(line.tl.channelAccessToken))
 #ks.log("Auth Token : " + str(ks.authToken))
 #ks.log("Timeline Token : " + str(ks.tl.channelAccessToken))
 print ("Login Succes")
-print ("\n\nขอบคุณ Sorce Code จาก :\nhttps://github.com/NIGHTBATv1/55555\n(ไม่ทราบแหล่งที่มาก่อนหน้านั้น)\n\nร่วมสอนรันเซล์ฟบอทให้ง่ายขึ้นกับชุมชนของเรา\n\nline://ti/g2/OXNFJ5K4P9\n\n")
+print ("")
 
 lineMID = line.profile.mid
 lineProfile = line.getProfile()
@@ -257,14 +257,14 @@ def sendMessageWithMention(to, lineMID):
  
 def myhelp():
     myHelp = """〘😎😎😎 〙 
-🇹🇭คำสั่ง=คำสั่ง
-🇹🇭คำสั่ง2=คำสั่งเชล
-🇹🇭คำสั่ง3=คำสั่งกับแทค
-🇹🇭คำสั่ง4=คำสั่งตั้งค่า
-🇹🇭คำสั่ง5=คำสั่งค้นหา
-🇹🇭คำสั่ง6=คำสั่งกลุ่ม
-🇹🇭คำสั่ง7=คำสั่งเลียนแบบ
-🇹🇭คำสั่ง8=คำสั่งล่องหน
+🇹🇭h1=คำสั่ง
+🇹🇭h2=คำสั่งเชล
+🇹🇭h3=คำสั่งกับแทค
+🇹🇭h4=คำสั่งตั้งค่า
+🇹🇭h5=คำสั่งค้นหา
+🇹🇭h6=คำสั่งกลุ่ม
+🇹🇭h7=คำสั่งเลียนแบบ
+🇹🇭h8=คำสั่งล่องหน
 〘😎😎😎 〙"""
     return myHelp
 
@@ -488,29 +488,29 @@ def lineBot(op):
                         p = Pool(20)
                         p.map(Rapid1Say,rmtosay)
                         p.close()
-                if text.lower() == 'คำสั่ง':
+                if text.lower() == 'h1':
                     myHelp = myhelp()
                     line.sendMessage(to, str(myHelp))
-                elif text.lower() == 'คำสั่ง2':
+                elif text.lower() == 'h2':
                     helpSet = helpset()
                     line.sendMessage(to, str(helpSet))
                     sendMessageWithMention(to, lineMID)
-                elif text.lower() == 'คำสั่ง3':
+                elif text.lower() == 'h3':
                     helpKicker = helpkicker()
                     line.sendMessage(to, str(helpKicker))
-                elif text.lower() == 'คำสั่ง4':
+                elif text.lower() == 'h4':
                     listGrup = listgrup()
                     line.sendMessage(to, str(listGrup))
-                elif text.lower() == 'คำสั่ง5':
+                elif text.lower() == 'h5':
                     helpSetting = helpsetting()
                     line.sendMessage(to, str(helpSetting))
-                elif text.lower() == 'คำสั่ง6':
+                elif text.lower() == 'h6':
                     socMedia = socmedia()
                     line.sendMessage(to, str(socMedia))
-                elif text.lower() == 'คำสั่ง7':
+                elif text.lower() == 'h7':
                     helpTextToSpeech = helptexttospeech()
                     line.sendMessage(to, str(helpTextToSpeech))
-                elif text.lower() == 'คำสั่ง8':
+                elif text.lower() == 'h8':
                     helpLanguange = helplanguange()
                     line.sendMessage(to, str(helpLanguange))
 #===============หาชื่อล่อนหน===============================================================#
