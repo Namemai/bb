@@ -4040,8 +4040,8 @@ def lineBot(op):
                     line.sendText(msg.to,"👣เชคทั้งวัน👣")
                 if msg.text in ["speed","sp","Speed","สปีด","!speed","/speed"]:
                     line.sendText(msg.to,"👍แรงขนาดนี้ผมนี้ไลค์เลย👍")
-                if msg.text in ["อย","อยู่"]:
-                    line.sendText(msg.to,"❤ชุดต้อนรับทำงาน❤")
+                if msg.text in ["เปิด."]:
+                    line.sendText(msg.to,"เปิดดูคนอ่าน")
                 if msg.text in ["แทค"]:
                     line.sendText(msg.to,"ขออณุญาติแทคนะครับ")				
                 if msg.text in dangerMessage:
@@ -4108,7 +4108,7 @@ def lineBot(op):
             except:
                 pass
         if op.type == 55:
-            print ("[ 55 ] ตรวจพบข้อความ")
+            print ("[ 55 ] บอททำงานปกติคัฟ")
             try:
                 if op.param1 in read['readPoint']:
                     if op.param2 in read['readMember'][op.param1]:
