@@ -339,7 +339,7 @@ def helpset():
 🌪แอด
 🌪บอท
 🌪/ลบรัน
-🌪ผส
+🌪แทค
 🌪เพื่อน
 🌪เชคดำ
 🌪ล้างดำ
@@ -514,6 +514,21 @@ def lineBot(op):
                     helpLanguange = helplanguange()
                     line.sendMessage(to, str(helpLanguange))
 #===============หาชื่อล่อนหน===============================================================#
+                elif text.lower() == 'แทค':
+                    group = line.getGroup(msg.to)
+                    nama = [contact.mid for contact in group.members]
+                    k = len(nama)//20
+                    for a in range(k+1):
+                        txt = ''
+                        s=0
+                        b=[]
+                        for i in group.members[a*20 : (a+1)*20]:
+                            b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
+                            s += 7
+                            txt += '@Alin \n'
+                        line.sendMessage(to, text=txt, contentMetadata={'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
+                        line.sendMessage(to, "❋ทั้งหมด {} คน❋".format(str(len(nama))))
+#=========================================================================================#
                 elif text.lower() == '!แทค':
                     gs = line.getGroup(to)
                     targets = []
