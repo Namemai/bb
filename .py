@@ -4057,8 +4057,10 @@ def lineBot(op):
                     line.sendText(msg.to,"👍แรงขนาดนี้ผมนี้ไลค์เลย👍")
                 if msg.text in ["เปิด."]:
                     line.sendText(msg.to,"เปิดดูคนอ่าน")
-                if msg.text in ["แทค"]:
-                    line.sendText(msg.to,"ขออณุญาติแทคนะครับ")				
+                if msg.text in ["ปิด."]:
+                    line.sendText(msg.to,"ปิดดูคนอ่าน")
+                if msg.text in ["แทค."]:
+                    line.sendText(msg.to,"แทค")				
                 if msg.text in dangerMessage:
                     random.choice(Rfu).kickoutFromGroup(receiver,[sender])
                     random.choice(Rfu).sendText(msg.to,"ตรวจพบคำสั่งของบอทลบกลุ่ม จำเป็นต้องนำออกเพื่อความปลอดภัยของสมาชิก (｀・ω・´)")										
@@ -4123,7 +4125,7 @@ def lineBot(op):
             except:
                 pass
         if op.type == 55:
-            print ("[ 55 ] บอททำงานปกติคัฟ")
+            print ("[ Mai ] บอททำงานปกติคัฟ")
             try:
                 if op.param1 in read['readPoint']:
                     if op.param2 in read['readMember'][op.param1]:
