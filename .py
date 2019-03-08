@@ -4054,7 +4054,7 @@ def lineBot(op):
                 if msg.text in ["me","คท","Me",".คท","!me","/me"]:
                     line.sendText(msg.to,"👣เชคทั้งวัน👣")
                 if msg.text in ["speed","sp","Speed","สปีด","!speed","/speed"]:
-                    line.sendText(msg.to,"👍แรงขนาดนี้ผมนี้ไลค์เลย👍")
+                    line.sendText(msg.to,"sp")
                 if msg.text in ["เปิด."]:
                     line.sendText(msg.to,"เปิดดูคนอ่าน")
                 if msg.text in ["ปิด."]:
