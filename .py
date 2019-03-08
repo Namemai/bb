@@ -4051,9 +4051,9 @@ def lineBot(op):
                                           #sendMessageWithMention(to, contact.mid)
                                           line.sendMessage(msg.to, None, contentMetadata={"STKID":"51626512","STKPKGID":"11538","STKVER":"1"}, contentType=7)
                                           break
-                if msg.text in ["me","คท","Me",".คท","!me","/me"]:
-                    line.sendText(msg.to,"👣เชคทั้งวัน👣")
-                if msg.text in ["speed","sp","Speed","สปีด","!speed","/speed"]:
+                if msg.text in ["น้ำ","รักน้ำ"]:
+                    line.sendText(msg.to,"น้ำมีแฟนแล้วห้ามจีบแฟนน้ำชื่อใหม่")
+                if msg.text in ["speed","sp.น้ำ","Speed","สปีด","!speed","/speed"]:
                     line.sendText(msg.to,"sp")
                 if msg.text in ["เปิด."]:
                     line.sendText(msg.to,"เปิดดูคนอ่าน")
