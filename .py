@@ -718,7 +718,7 @@ def lineBot(op):
                             kk.leaveGroup(to)
                         except:
                             pass
-                elif text.lower() == 'สปีด':
+                elif text.lower() == 'sp':
                     start = time.time()
                     line.sendMessage(to,"ความเร็วของบอท..")
                     elapsed_time = time.time() - start
@@ -4053,14 +4053,18 @@ def lineBot(op):
                                           break
                 if msg.text in ["น้ำ","รักน้ำ"]:
                     line.sendText(msg.to,"น้ำมีแฟนแล้วห้ามจีบแฟนน้ำชื่อใหม่")
-                if msg.text in ["speed","sp.น้ำ","Speed","สปีด","!speed","/speed"]:
+                if msg.text in ["speed","sp.","Speed","สปีด","!speed","/speed"]:
                     line.sendText(msg.to,"sp")
                 if msg.text in ["เปิด."]:
                     line.sendText(msg.to,"เปิดดูคนอ่าน")
                 if msg.text in ["ปิด."]:
                     line.sendText(msg.to,"ปิดดูคนอ่าน")
                 if msg.text in ["แทค."]:
-                    line.sendText(msg.to,"แทค")				
+                    line.sendText(msg.to,"แทค")
+                if msg.text in ["mai"]:
+                    line.sendText(msg.to,"มารายงานตัวคัฟแล้ว")
+                if msg.text in ["mai on"]:
+                    line.sendText(msg.to,"ออน")
                 if msg.text in dangerMessage:
                     random.choice(Rfu).kickoutFromGroup(receiver,[sender])
                     random.choice(Rfu).sendText(msg.to,"ตรวจพบคำสั่งของบอทลบกลุ่ม จำเป็นต้องนำออกเพื่อความปลอดภัยของสมาชิก (｀・ω・´)")										
